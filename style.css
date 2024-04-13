@@ -1,0 +1,224 @@
+/* Outfit font-face */
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 100;
+  src: local("Outfit Thin"), local("Outfit-Thin"),
+    url("assets/fonts/outfit/static/Outfit-Thin.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Outfit ExtraLight"), local("Outfit-ExtraLight"),
+    url("assets/fonts/outfit/static/Outfit-ExtraLight.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Outfit Light"), local("Outfit-Light"),
+    url("assets/fonts/outfit/static/Outfit-Light.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Outfit Regular"), local("Outfit-Regular"),
+    url("assets/fonts/outfit/static/Outfit-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Outfit Medium"), local("Outfit-Medium"),
+    url("assets/fonts/outfit/static/Outfit-Medium.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Outfit SemiBold"), local("Outfit-SemiBold"),
+    url("assets/fonts/outfit/static/Outfit-SemiBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Outfit Bold"), local("Outfit-Bold"),
+    url("assets/fonts/outfit/static/Outfit-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Outfit ExtraBold"), local("Outfit-ExtraBold"),
+    url("assets/fonts/outfit/static/Outfit-ExtraBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Outfit Bold"), local("Outfit-Bold"),
+    url("assets/fonts/outfit/static/Outfit-Bold.ttf") format("opentype");
+}
+
+/* Young Serif font-face */
+@font-face {
+  font-family: "Young Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: local("YoungSerif Regular"), local("YoungSerif-Regular"),
+    url("assets/fonts/young-serif/YoungSerif-Regular.ttf") format("opentype");
+}
+
+:root {
+  box-sizing: inherit;
+
+  /* primary */
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  /* neutral */
+  --white: hsl(0, 0%, 100%);
+  --rose-white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--eggshell);
+  padding: 2em;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 1.5em;
+  font-family: "Outfit", sans-serif;
+  color: var(--wenge-brown);
+}
+
+body * + * {
+  margin-block-start: 1.5em;
+}
+
+main {
+  justify-self: center;
+  align-self: center;
+  max-width: 650px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.content-wrapper {
+  padding: 0 1.5em 1.5em;
+}
+
+.image-wrapper {
+  padding: 1.5em 1.5em 0;
+}
+
+h1,
+section h2 {
+  font-family: "Young Serif", sans-serif;
+}
+
+h1 {
+  color: var(--dark-charcoal);
+}
+
+h2,
+section li::marker {
+  color: var(--nutmeg);
+}
+
+ul,
+ol,
+li {
+  padding-inline-start: 1.25rem;
+}
+
+section:not(:last-of-type) {
+  padding-block-end: 2em;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.recipe-info {
+  background-color: var(--rose-white);
+  border-radius: 8px;
+  padding: 1.5em;
+}
+
+.recipe-info li::marker,
+.recipe-info h2 {
+  color: var(--dark-raspberry);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  margin-block-end: 1em;
+}
+
+caption,
+th {
+  text-align: start;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--light-grey);
+  padding-block: 1em;
+}
+
+th {
+  padding-inline-start: 1.5em;
+  font-weight: 400;
+}
+
+td {
+  color: var(--nutmeg);
+  font-weight: 700;
+}
+
+footer {
+  margin-block-start: 0;
+  padding-block: 1em;
+  text-align: center;
+}
+
+@media screen and (max-width: 670px) {
+  body,
+  .image-wrapper {
+    padding: 0;
+  }
+
+  main,
+  img {
+    border-radius: 0;
+  }
+}
